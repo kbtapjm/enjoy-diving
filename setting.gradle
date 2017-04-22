@@ -1,0 +1,5 @@
+rootProject.name = 'enjoy-diving'
+
+include 'enjoy-diving-common'
+include 'enjoy-diving-web'
+include 'enjoy-diving-service'
