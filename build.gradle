@@ -1,28 +1,65 @@
+description 'enjoy-diving root project'
+
+allprojects {
+    group 'kr.co.pjm.diving'
+    version '0.0.1-SNAPSHOT'
+}
+
 buildscript {
 	ext {
 		springBootVersion = '1.5.2.RELEASE'
+		depManagementVersion = '1.0.1.RELEASE'
+		gladleDockerVersion = '1.2'
 	}
 	repositories {
 		mavenCentral()
+		jcenter()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("io.spring.gradle:dependency-management-plugin:${depManagementVersion}")
+		classpath("se.transmode.gradle:gradle-docker:${gladleDockerVersion}")
 	}
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
+subprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
 
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse-wtp'
 
-repositories {
-	mavenCentral()
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+    
+    apply plugin: 'docker'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+    dependencies {
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: "${springBootVersion}"
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: "${springBootVersion}"
+
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: "${springBootVersion}"
+
+        compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
+        compile group: 'commons-io', name: 'commons-io', version: '2.5'
+
+        compile group: 'org.projectlombok', name: 'lombok', version: '1.16.14'
+
+        testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: "${springBootVersion}"
+        compile group: 'org.springframework.security', name: 'spring-security-test', version: '4.2.2.RELEASE'
+    }
+
 }
 
-
-dependencies {
-	compile('org.springframework.boot:spring-boot-starter-web')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+task wrapper(type: Wrapper) {
+    gradleVersion = "3.3"
 }
