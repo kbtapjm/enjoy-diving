@@ -63,49 +63,7 @@ enjoy-diving 프로젝트의 `스쿠버 다이빙 로그 관리 project`로 웹 
 
 ##### package 구조
 
-java : `kr.co.pjm.diving.web`
-```
-├── common                                               // 공통 class
-├── configuration                                        // 설정 class
-│   ├── root                                            // root context 설정 class
-│   ├── security                                        // security 설정 class
-│   └── web                                             // webMvc 설정 class
-├── controller                                      
-├── domain
-│   ├── entity                                          // table entity POJO
-│   └── dto                                             // dto class
-├── repasitory                                           // mapper interface
-│   └── support                                         // rapasitory support class
-└── service                                              // service interface
-     └── impl                                            // service class
-```
 
-resources
-```
-├── META-INF
-├── application.yml
-├── config                                                  // 로그 및 스케쥴러 설정 files
-│   ├── logback-spring.xml
-│   └── schedule-properties.xml
-├── database
-│   ├── erd                                                 // erd file
-│   └── sql                                                 // ddl, dml sql files
-├── i18n                                                     // message properties
-├── public
-│   └── static
-│       ├── css                                             // css files
-│       ├── images                                          // image files
-│       └── js
-│           ├── common                                      // dev 공통 js files
-│           ├── content                                     // 특정 page의 종속적인 js files
-│           ├── lib                                         // js 라이브러리 files
-│           └── publish                                     // 퍼블리셔 js files
-└── templates
-    ├── common                                              // 공통 html files
-    ├── content                                             // 특정 page html files
-    ├── error                                               // error html files
-    └── layout                                              // thymeleaf layout html files
-```
 
 #### enjoy-diving-service
 enjoy-diving 프로젝트의 `rest api project`로 연동에 필요한 API를 구현
