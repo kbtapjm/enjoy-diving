@@ -32,7 +32,9 @@ Server를 구성하고 있는 framework 및 library 정보
 + lombok : `1.16.14`
 + spring-security-test : `4.2.2.RELEASE`
 + spring-boot-starter-thymeleaf : `3.0.2.RELEASE`
++ mysql : `5.1.41`
 + h2 : `1.4.194`
++ querydsl : `4.1.4`
 
 ## 2. Project 구성
 
@@ -41,10 +43,10 @@ Build Tool은 [Gradle](https://gradle.org)을 이용 하며, Multi Project로 �
 
 ### Project 구성
 
-* enjoy-diving
-* enjoy-diving-common
-* enjoy-diving-web
-* enjoy-diving-service
+* [enjoy-diving](https://github.com/kbtapjm/enjoy-diving)
+* [enjoy-diving-common](https://github.com/kbtapjm/enjoy-diving-common)
+* [enjoy-diving-web](https://github.com/kbtapjm/enjoy-diving-web)
+* [enjoy-diving-service](https://github.com/kbtapjm/enjoy-diving-service)
 
 #### enjoy-diving
 enjoy-diving 프로젝트의 `root project` (base gradle 설정을 포함)
