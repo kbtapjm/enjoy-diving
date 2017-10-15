@@ -39,7 +39,7 @@ Server를 구성하고 있는 framework 및 library 정보
 ## 2. Project 구성
 
 ### Gradle Multi Project
-Build Tool은 [Gradle](https://gradle.org)을 이용 하며, Multi Project로 구성함으로써 Project Package를 재활용하여 중복되는 코들 줄이고, Project를 계층 또는 다양화할 수 있도록 설계
+Build Tool은 [Gradle](https://gradle.org)을 이용 하며, Multi Project로 구성함으로써 Project Package를 재활용하여 중복되는 코드를 줄이고, Project를 계층 또는 다양화할 수 있도록 설계
 
 ### Project 구성
 
