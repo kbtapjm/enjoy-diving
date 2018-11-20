@@ -46,7 +46,6 @@ subprojects {
     dependencies {
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: "${springBootVersion}"
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: "${springBootVersion}"
-
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: "${springBootVersion}"
 
         compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
@@ -56,6 +55,8 @@ subprojects {
 
         testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: "${springBootVersion}"
         compile group: 'org.springframework.security', name: 'spring-security-test', version: '4.2.2.RELEASE'
+        
+        compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.9.4'
     }
 
 }
