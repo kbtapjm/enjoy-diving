@@ -10,6 +10,7 @@ Server를 구성하고 있는 framework 및 library 정보
 + [Spring Security](http://projects.spring.io/spring-security/ "Spring Security")
 + [Spring Security OAuth2](https://projects.spring.io/spring-security-oauth/)
 + [Spring Session With Redis](https://docs.spring.io/spring-session/docs/current/reference/html5/guides/boot.html)
++ [Spring Social](http://cloud.spring.io/spring-cloud-aws/spring-cloud-aws.html)
 + [Spring Cloud With AWS S3](http://cloud.spring.io/spring-cloud-aws/spring-cloud-aws.html)
 + [Spring Data JPA](http://projects.spring.io/spring-data-jpa/)
 + [Querydsl](http://www.querydsl.com/)
@@ -19,8 +20,6 @@ Server를 구성하고 있는 framework 및 library 정보
 + [Spring Security Test](http://docs.spring.io/spring-security/site/docs/current/reference/html/test-method.html)
 + [Gradle Build Tool](https://gradle.org)
 + [Docker](https://www.docker.com)
-
-** ETC
 + [Logback](https://logback.qos.ch/)
 
 ### Version 정보
@@ -28,6 +27,8 @@ Server를 구성하고 있는 framework 및 library 정보
 + java : `1.8`
 + gradle wrapper : `3.3`
 + spring boot(web, jpa, security, validation, jdbc, devtools, test) : `1.5.2.RELEASE`
++ spring session : `1.3.1.RELEASE`
++ spring social : `1.1.4.RELEASE`
 + dependency-management-plugin : `1.0.1.RELEASE`
 + lombok : `1.16.14`
 + spring-security-test : `4.2.2.RELEASE`
@@ -52,13 +53,13 @@ Build Tool은 [Gradle](https://gradle.org)을 이용 하며, Multi Project로 �
 enjoy-diving 프로젝트의 `root project` (base gradle 설정을 포함)
 
 #### enjoy-diving-common
-enjoy-diving 프로젝트의 `common project`로 공통으로 사용하는 클래스를 정의
+enjoy-diving 프로젝트의 `common project`로 공통으로 사용하는 Entity, Repasitory, Utility 클래스를 정의
 
 #### enjoy-diving-web
 enjoy-diving 프로젝트의 `스쿠버 다이빙 로그 관리 project`로 웹 서버를 구현
 
 ##### dependencies info
-* web, jpa, Security, validation, jdbc, devtools
+* web, jpa, Security, validation, jdbc, devtools, social
 * thymeleaf, jquery
 * test, security test
 * h2, mysql
