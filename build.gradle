@@ -61,12 +61,6 @@ subprojects {
 
 }
 
-project(':enjoy-diving-web') {
-    dependencies {
-        compile project(':enjoy-diving-common')
-    }
-}
-
 task wrapper(type: Wrapper) {
     gradleVersion = "3.3"
 }
