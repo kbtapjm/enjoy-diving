@@ -214,10 +214,3 @@ gradle-app.setting
 
 ### local profile upload directory
 **/upload/
-
-# exclude sub projects
-**/enjoy-diving-common/
-**/enjoy-diving-web/
-**/enjoy-diving-service/
-
-
